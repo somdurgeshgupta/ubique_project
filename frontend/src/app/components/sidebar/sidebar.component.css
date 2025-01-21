@@ -1,0 +1,25 @@
+.sidebar {
+  width: 250px;
+  position: fixed;
+  left: -250px;
+  transition: left 0.3s;
+  background: #f4f4f4;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.more-options {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.more-options.visible {
+  height: auto;
+  opacity: 1;
+}

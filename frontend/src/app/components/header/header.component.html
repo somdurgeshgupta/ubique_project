@@ -1,0 +1,62 @@
+<header class="header">
+  <nav class="nav-container">
+    <!-- Sidebar Toggle Button -->
+    <button (click)="onToggleSidebar()" class="sidebar-button">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/dashboard/about">About</a>
+      </li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/dashboard/pages">Pages</a>
+      </li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/dashboard/contact">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Session Countdown -->
+    <div class="session-timer">
+      <span><strong>Session expires in: </strong>{{ formattedCountdown }}</span>
+    </div>
+
+    <!-- Profile Info -->
+    <strong class="profile-info"
+      >{{ profileData.name }} ({{ profileData.email }})</strong
+    >
+
+    <!-- Profile Menu -->
+    <ul class="profile-menu">
+      <li>
+        <img
+          class="profile-picture"
+          [src]="profileData.profileImage || profileData.picture"
+          alt="User Profile"  
+          [appBrokenImage]="'/basic_user.jpg'"
+          [matMenuTriggerFor]="profileMenu" />
+      </li>
+      <li>
+        <a class="login-button" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+
+    <!-- Dropdown Menu -->
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item routerLink="/dashboard/profile">
+        <mat-icon>person</mat-icon>
+        <span>View Profile</span>
+      </button>
+      <button mat-menu-item routerLink="/dashboard/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </nav>
+</header>

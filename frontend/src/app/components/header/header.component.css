@@ -1,0 +1,133 @@
+/* Header Styles */
+.header {
+  background-color: #c7cbce;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-button {
+  background-color: #c7cbce;
+  color: #7f8388;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-button i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style-type: none;
+  margin: 0px 40px;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  color: #648db9;
+}
+
+.active {
+  font-weight: bold;
+  color: #648db9;
+}
+
+/* Session Timer */
+/* Session Timer */
+/* Session Timer */
+.session-timer {
+  margin: 0 auto; /* Center horizontally */
+  padding: 5px 10px;
+  border: 2px solid #7f8388;
+  border-radius: 8px;
+  background-color: #c7cbce;
+  font-size: 14px;
+  color: #555;
+  text-align: center; /* Align text to center */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  width: auto; /* Ensure it does not take up full width */
+}
+
+
+
+/* Profile Info */
+.profile-info {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Profile Menu */
+.profile-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0px 40px;
+  padding: 0;
+}
+
+/* Profile Picture */
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1);
+  border-color: #648db9;
+}
+
+/* Login Button */
+.login-button {
+  background-color: #c7cbce; /* Button background */
+  color: #333; /* Text color */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  /* border-color: black; */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px 10px; /* Padding inside the button */
+  font-size: 16px; /* Font size for text */
+  cursor: pointer; /* Pointer cursor on hover */
+  /* transition: all 0.3s ease; Smooth hover effect */
+}
+
+.login-button:hover {
+  background-color: #c7cbce; /* Change background on hover */
+  color: rgb(76, 76, 76); /* Change text color on hover */
+  border-color: #648db9; /* Darker border on hover */
+}
