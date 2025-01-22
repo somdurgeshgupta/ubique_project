@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../../services/user.service';
-import { environment } from '../../../../environments/environment';
 import { ProfileService } from '../../../profile.service';
 
 @Component({
@@ -36,9 +35,7 @@ export class ProfileComponent {
           this.profileForm.patchValue(res);
   
           // Determine profile image source
-          this.profileImage = res.profileImage
-            ? `${environment.API_URL}${res.profileImage}`
-            : res.picture; // Fallback to an empty string if res.picture is undefined or null
+          this.profileImage = res.profileImage ? res.profileImage : res.picture || '/basic_user.jpg';
         }
       },
       error: (error: any) => {
@@ -68,11 +65,10 @@ export class ProfileComponent {
   onSubmit(): void {
     if (this.profileForm.valid && this.selectedFile) {
       const formData = new FormData();
-
       formData.append('profileImage', this.selectedFile);
       this.userService.updateProfile(formData).subscribe((res:any)=>{
-        // console.log(res);
         this.profileService.updateProfileImage(res.imageUrl);
+        this.selectedFile = null;
       });
     }
   }

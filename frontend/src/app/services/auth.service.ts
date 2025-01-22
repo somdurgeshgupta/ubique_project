@@ -92,7 +92,7 @@ export class AuthService {
     }
   }
 
-  private startLogoutCountdown(duration: number): void {
+  startLogoutCountdown(duration: number): void {
     // Clear any existing timer or observable subscription
     this.clearTimer();
 
@@ -128,7 +128,7 @@ export class AuthService {
     }
   }
 
-  private clearSession(): void {
+  clearSession(): void {
     // Clear timers and localStorage
     this.clearTimer();
     this.logoutTimerSubject.next(0);
