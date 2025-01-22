@@ -57,3 +57,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## This frontend project is already deployed in AWS Amplify.
+You can get the URL of the website in this Link: https://main.d2jo75f7fo9l7u.amplifyapp.com/
